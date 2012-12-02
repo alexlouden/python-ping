@@ -9,9 +9,11 @@ Original Version from [[ftp://ftp.visi.com/users/mdc/ping.py|Matthew Dixon Cowle
 * license: GNU GPL v2, see [[https://github.com/jedie/python-ping/blob/master/LICENSE|LICENSE]] for more details.
 
 
-=== Usage ===
+Usage
+=====
 
-==== Commandline: ====
+Commandline:
+------------
 
 **Single ping:**
 
@@ -71,7 +73,8 @@ optional arguments:
   -i INTERVAL  Wait interval seconds between sending each packet.
 ```
   
-==== Package: ====
+Package:
+--------
 
 **Simple:**
 
@@ -126,18 +129,20 @@ Ping statistics for google.com:
         Average = 56.40ms, Jitter = 0.08ms
 ```
 
-== TODO ==
+TODO
+====
 
 * Complete unit tests
 * Ensure cross-platform compatibility (Windows 7 checked, OSX and Linux TBA)
 * Ensure thread safety
 
-== Contribute ==
+Contribute
+==========
 
 [[http://help.github.com/fork-a-repo/|Fork this repo]] on [[https://github.com/jedie/python-ping/|GitHub]] and [[http://help.github.com/send-pull-requests/|send pull requests]]. Thank you.
 
-
-== Revision history ==
+Revision history
+================
 
 ==== Dec. 2, 2012 ====
 
