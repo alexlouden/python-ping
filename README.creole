@@ -13,17 +13,17 @@ Original Version from [[ftp://ftp.visi.com/users/mdc/ping.py|Matthew Dixon Cowle
 
 ==== Commandline: ====
 
-'''Single ping:'''
+**Single ping:**
 
-{{{
+```
 >python -m pyping google.com
 Pinging google.com with 32 bytes of data: time=61.12ms, ttl=55, icmp_seq=1
 61.1217238846
-}}}
+```
 
-'''Multiple ping:'''
+**Multiple ping:**
 
-{{{
+```
 >python -m pyping google.com -n 4
 Pinging google.com with 32 bytes of data: time=62.12ms, ttl=55, icmp_seq=1
 Pinging google.com with 32 bytes of data: time=56.59ms, ttl=55, icmp_seq=2
@@ -34,11 +34,11 @@ Ping statistics for google.com:
         Approximate round trip times in milli-seconds:
         Minimum = 56.21ms, Maximum = 62.12ms
         Average = 57.89ms, Jitter = 2.45ms
-}}}
+```
 
-'''Infinite ping:'''
+**Infinite ping:**
 
-{{{
+```
 >python -m pyping google.com -t
 Pinging google.com with 32 bytes of data: time=61.72ms, ttl=55, icmp_seq=1
 Pinging google.com with 32 bytes of data: time=56.77ms, ttl=55, icmp_seq=2
@@ -49,11 +49,11 @@ Ping statistics for google.com:
         Approximate round trip times in milli-seconds:
         Minimum = 56.14ms, Maximum = 61.72ms
         Average = 58.21ms, Jitter = 2.50ms
-}}}
+```
 
-'''Help:'''
+**Help:**
 
-{{{
+```
 >python -m pyping --help
 usage: __main__.py [-h] [-l SIZE] [-w TIMEOUT] [-t] [-n COUNT] [-i INTERVAL] hostname
 
@@ -69,21 +69,21 @@ optional arguments:
   -t           Ping the specified host until stopped.
   -n COUNT     Number of echo requests to send.
   -i INTERVAL  Wait interval seconds between sending each packet.
-}}}
+```
   
 ==== Package: ====
 
-'''Simple:'''
+**Simple:**
 
-{{{
+```
 >>> from pyping import Ping
 >>> Ping('google.com').do()
 60.97527671346604
-}}}
+```
 
-'''Multiple, formatted:'''
+**Multiple, formatted:**
 
-{{{
+```
 >>> from pyping import Ping
 >>> ping = Ping('google.com')
 >>> ping.do()
@@ -96,11 +96,11 @@ Pinging google.com with 32 bytes of data: time=55.91ms, ttl=55, icmp_seq=2
 56.48832655602831
 >>> print ping
 Pinging google.com with 32 bytes of data: time=56.49ms, ttl=55, icmp_seq=3
-}}}
+```
 
-'''Pinger:'''
+**Pinger:**
 
-{{{
+```
 >>> from pyping import Pinger
 >>> pinger = Pinger('google.com')
 Pinging google.com with 32 bytes of data: time=56.38ms, ttl=55, icmp_seq=1
@@ -124,7 +124,7 @@ Ping statistics for google.com:
         Approximate round trip times in milli-seconds:
         Minimum = 56.33ms, Maximum = 56.54ms
         Average = 56.40ms, Jitter = 0.08ms
-}}}
+```
 
 == TODO ==
 
