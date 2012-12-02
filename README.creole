@@ -15,7 +15,7 @@ Original Version from [[ftp://ftp.visi.com/users/mdc/ping.py|Matthew Dixon Cowle
 
 **Single ping:**
 
-```
+```bash
 >python -m pyping google.com
 Pinging google.com with 32 bytes of data: time=61.12ms, ttl=55, icmp_seq=1
 61.1217238846
@@ -23,7 +23,7 @@ Pinging google.com with 32 bytes of data: time=61.12ms, ttl=55, icmp_seq=1
 
 **Multiple ping:**
 
-```
+```bash
 >python -m pyping google.com -n 4
 Pinging google.com with 32 bytes of data: time=62.12ms, ttl=55, icmp_seq=1
 Pinging google.com with 32 bytes of data: time=56.59ms, ttl=55, icmp_seq=2
@@ -38,7 +38,7 @@ Ping statistics for google.com:
 
 **Infinite ping:**
 
-```
+```bash
 >python -m pyping google.com -t
 Pinging google.com with 32 bytes of data: time=61.72ms, ttl=55, icmp_seq=1
 Pinging google.com with 32 bytes of data: time=56.77ms, ttl=55, icmp_seq=2
@@ -53,7 +53,7 @@ Ping statistics for google.com:
 
 **Help:**
 
-```
+```bash
 >python -m pyping --help
 usage: __main__.py [-h] [-l SIZE] [-w TIMEOUT] [-t] [-n COUNT] [-i INTERVAL] hostname
 
@@ -75,7 +75,7 @@ optional arguments:
 
 **Simple:**
 
-```
+```python
 >>> from pyping import Ping
 >>> Ping('google.com').do()
 60.97527671346604
@@ -83,7 +83,7 @@ optional arguments:
 
 **Multiple, formatted:**
 
-```
+```python
 >>> from pyping import Ping
 >>> ping = Ping('google.com')
 >>> ping.do()
@@ -100,7 +100,7 @@ Pinging google.com with 32 bytes of data: time=56.49ms, ttl=55, icmp_seq=3
 
 **Pinger:**
 
-```
+```python
 >>> from pyping import Pinger
 >>> pinger = Pinger('google.com')
 Pinging google.com with 32 bytes of data: time=56.38ms, ttl=55, icmp_seq=1
